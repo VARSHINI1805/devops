@@ -1,5 +1,5 @@
 nano sample.txt
 
-
+hi hello
 
 
