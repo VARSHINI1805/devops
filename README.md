@@ -12,8 +12,6 @@ This repository contains my complete DevOps practical work performed using:
 
 ---
 
-
-
 # 🖥️ Environment Setup
 
 ## 1️⃣ VMware Setup
@@ -39,11 +37,6 @@ This repository contains my complete DevOps practical work performed using:
 - File handling
 - Networking commands
 - SSH configuration
-
-## 🖼️ Screenshots
-
-![Day1 Screenshot](Day1/Screenshot%202026-02-09%20144416.png)
-
 ---
 
 # 📁 Day 2 – Docker Practical
@@ -56,11 +49,7 @@ This repository contains my complete DevOps practical work performed using:
 - Port mapping & volume mounting
 - Pushed images to Docker Hub
 
-## 🖼️ Screenshots
 
-![Day2 Screenshot](Day2/Screenshot%202026-02-10%20145958.png)
-
----
 
 # 📁 Day 3 – Docker Sample Project
 
@@ -69,10 +58,6 @@ This repository contains my complete DevOps practical work performed using:
 - Built Docker sample project
 - Executed containers
 - Deployed Nginx web container
-
-## 🖼️ Screenshots
-
-![Day3 Screenshot](Day3/Screenshot%202026-02-12%20195616.png)
 
 ---
 
