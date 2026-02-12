@@ -1,4 +1,4 @@
-# 🚀 DevOps Practical Repository
+# 🚀 DevOps 
 
 This repository contains my complete DevOps practical work performed using:
 
