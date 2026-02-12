@@ -1,90 +1,179 @@
-# 🚀 DevOps Learning Repository
+# 🚀 DevOps Practical Repository
 
-This repository contains my hands-on DevOps implementation and practical learning using modern DevOps tools and technologies.
+This repository contains my complete DevOps practical work performed using:
 
-It demonstrates practical understanding of:
-
-- 🐧 Linux fundamentals  
-- 🐳 Docker containerization  
-- 🔀 Git & GitHub workflows  
-- 🌿 Branch management  
-- ⚙️ Jenkins setup  
-- 📁 Project structuring  
+- VMware Workstation
+- Ubuntu Server
+- SSH
+- VS Code Remote
+- Docker
+- Git & GitHub
+- Jenkins
 
 ---
 
+## 📂 Project Structure
+
+DevOps/
+│
+├── Day1/
+│ ├── Linux Commands
+│ ├── Screenshots
+│ └── Notes
+│
+├── Day2/
+│ ├── Docker Installation
+│ ├── Docker Commands
+│ └── Screenshots
+│
+├── Day3/
+│ ├── docker_sample Project
+│ ├── Nginx Setup
+│ └── Screenshots
+│
+├── Day4/
+│ ├── Jenkins Installation
+│ └── Screenshots
+│
+└── README.md
+
+
+---
+
+# 🖥️ Environment Setup
+
+## 1️⃣ VMware Setup
+- Installed VMware Workstation
+- Created Ubuntu Server VM
+- Configured NAT networking
+
+## 2️⃣ Ubuntu Server Configuration
+- Updated system
+- Installed OpenSSH
+- Configured firewall
+
+## 3️⃣ SSH & VS Code Remote
+- Connected Ubuntu using SSH
+- Configured VS Code Remote-SSH
+
+---
 
 # 📁 Day 1 – Linux Fundamentals
 
-In Day 1, I practiced basic Linux commands and SSH configuration inside Ubuntu (VMware environment).
-
-## 🔹 Tasks Performed
-
-- File & directory commands
-- Package update & upgrade
+## 🔹 Practical Work
+- Basic Linux commands
+- File handling
+- Networking commands
 - SSH configuration
-- Basic networking commands
-- System management
 
-## 🖥️ Screenshots
+## 🖼️ Screenshots
 
 ![Day1 Screenshot](Day1/Screenshot%202026-02-09%20144416.png)
 
 ---
 
-# 📁 Day 2 – Docker Setup & Container Management
+# 📁 Day 2 – Docker Practical
 
-In Day 2, Docker was installed and container lifecycle operations were performed.
+## 🔹 Practical Work
+- Installed Docker
+- Built Docker images
+- Ran containers
+- Used Nginx container
+- Port mapping & volume mounting
+- Pushed images to Docker Hub
 
-## 🔹 Tasks Performed
-
-- Docker installation
-- Running nginx container
-- Port mapping
-- Volume mounting
-- Docker image build & run
-- Docker Hub interaction
-
-## 🐳 Screenshots
+## 🖼️ Screenshots
 
 ![Day2 Screenshot](Day2/Screenshot%202026-02-10%20145958.png)
 
 ---
 
-# 📁 Day 3 – Docker Sample Project Deployment
+# 📁 Day 3 – Docker Sample Project
 
-In Day 3, a Docker sample project was built and deployed using Dockerfile.
+## 🔹 Practical Work
+- Created Dockerfile
+- Built Docker sample project
+- Executed containers
+- Deployed Nginx web container
 
-## 🔹 Tasks Performed
-
-- Dockerfile creation
-- Image building
-- Container execution
-- Application deployment
-- Project folder organization
-
-## 📦 Screenshots
+## 🖼️ Screenshots
 
 ![Day3 Screenshot](Day3/Screenshot%202026-02-12%20195616.png)
 
 ---
 
-# 📁 Day 4 – Jenkins Installation & Configuration
+# 📁 Day 4 – Jenkins Setup
 
-In Day 4, Jenkins was installed and configured on Ubuntu Server for CI/CD setup.
-
-## 🔹 Tasks Performed
-
-- Installed OpenJDK 21
-- Added Jenkins repository & GPG key
+## 🔹 Practical Work
+- Installed Java (OpenJDK 21)
+- Added Jenkins repository
 - Installed Jenkins
 - Started Jenkins service
 - Retrieved initial admin password
-- Installed suggested plugins
-- Configured admin user
-- Accessed Jenkins dashboard (Port 8080)
+- Installed required plugins
+- Accessed Jenkins dashboard
 
-## 🔐 Command Used to Retrieve Initial Password
+## 🔐 Command Used
 
 ```bash
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+🖼️ Screenshots
+
+🔀 Git & GitHub Workflow
+Configured SSH authentication
+
+Created multiple branches:
+
+day-1
+
+day-2
+
+day3
+
+day-4
+
+Merged branches into main
+
+Organized project folders
+
+🎯 Learning Outcomes
+✔ Understanding Linux commands
+✔ Docker image & container lifecycle
+✔ Git branching and merging
+✔ SSH authentication setup
+✔ Jenkins installation and configuration
+✔ Complete DevOps workflow
+
+👩‍💻 Author
+Varshini S
+DevOps Practical Record
+Computer Science Engineering
+
+📌 Status
+This repository is continuously updated as part of my DevOps learning journey.
+
+
+---
+
+# ⚠️ Important
+
+If your screenshot names are different, run:
+
+```bash
+ls Day1
+ls Day2
+ls Day3
+ls Day4
+Then send the output — I’ll adjust image paths exactly for your repo.
+
+✅ How To Add
+git checkout main
+nano README.md
+Paste → Save (CTRL + O) → Enter
+Exit (CTRL + X)
+
+Then:
+
+git add README.md
+git commit -m "Updated README with images"
+git push
