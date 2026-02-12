@@ -72,67 +72,53 @@ This repository contains my complete DevOps practical work performed using:
 - Installed required plugins
 - Accessed Jenkins dashboard
 
-## 🔐 Command Used
+Linux Commands  
+1. pwd 
+Shows the present working directory. 
+2. ls 
+Lists files and directories in the current folder. 
+3. ls -l 
+Shows detailed file information. 
+4. ls -a 
+Shows hidden files. 
+5. ls -al 
+Shows hidden files with detailed information. 
+6. mkdir varshini 
+Creates a new directory named varshini. 
+7. cd varshini 
+Changes into the varshini directory. 
+8. touch new.txt 
+Creates an empty file named new.txt. 
+9. ls 
+Lists files to confirm new.txt was created. 
+10. vim new.txt 
+Opens the file in Vim editor. 
+11. cat new.txt 
+Displays the contents of new.txt. 
+12. cd .. 
+Moves back to the previous directory. 
+13. mkdir newdir 
+Creates a new directory named newdir. 
+14. cp new.txt newdir/ 
+Copies new.txt into newdir folder. 
+15. ls newdir/ 
+Lists files inside newdir. 
+16. cp new.txt newdir/new1.txt 
+Copies and renames file as new1.txt inside newdir. 
+17. cat newdir/new1.txt 
+Displays contents of new1.txt. 
+18. mv newdir/new1.txt new1.txt 
+Moves file from newdir to current directory. 
+19. rmdir newdir 
+Removes newdir if it is empty. 
+20. sudo apt update 
+Updates package list. 
+21. sudo apt install vim 
+Installs Vim editor. 
+22. vim --version 
+Checks installed Vim version. 
+23. clear 
+Clears the terminal screen.
 
-```bash
-sudo cat /var/lib/jenkins/secrets/initialAdminPassword
-🖼️ Screenshots
-
-🔀 Git & GitHub Workflow
-Configured SSH authentication
-
-Created multiple branches:
-
-day-1
-
-day-2
-
-day3
-
-day-4
-
-Merged branches into main
-
-Organized project folders
-
-🎯 Learning Outcomes
-✔ Understanding Linux commands
-✔ Docker image & container lifecycle
-✔ Git branching and merging
-✔ SSH authentication setup
-✔ Jenkins installation and configuration
-✔ Complete DevOps workflow
-
-👩‍💻 Author
-Varshini S
-DevOps Practical Record
-Computer Science Engineering
-
-📌 Status
-This repository is continuously updated as part of my DevOps learning journey.
 
 
----
-
-# ⚠️ Important
-
-If your screenshot names are different, run:
-
-```bash
-ls Day1
-ls Day2
-ls Day3
-ls Day4
-Then send the output — I’ll adjust image paths exactly for your repo.
-
-✅ How To Add
-git checkout main
-nano README.md
-Paste → Save (CTRL + O) → Enter
-Exit (CTRL + X)
-
-Then:
-
-git add README.md
-git commit -m "Updated README with images"
-git push
