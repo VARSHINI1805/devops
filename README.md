@@ -12,33 +12,7 @@ This repository contains my complete DevOps practical work performed using:
 
 ---
 
-## 📂 Project Structure
 
-DevOps/
-│
-├── Day1/
-│ ├── Linux Commands
-│ ├── Screenshots
-│ └── Notes
-│
-├── Day2/
-│ ├── Docker Installation
-│ ├── Docker Commands
-│ └── Screenshots
-│
-├── Day3/
-│ ├── docker_sample Project
-│ ├── Nginx Setup
-│ └── Screenshots
-│
-├── Day4/
-│ ├── Jenkins Installation
-│ └── Screenshots
-│
-└── README.md
-
-
----
 
 # 🖥️ Environment Setup
 
