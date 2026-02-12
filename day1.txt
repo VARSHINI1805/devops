@@ -1,5 +1,5 @@
-Prepared by: Varshini S
-Topic: Linux Fundamentals, Virtualization & Ubuntu Setup
+
+Topic: Linux Fundamentals
 
 1. Introduction to DevOps
 DevOps is a combination of Development (Dev) and Operations (Ops). It focuses on collaboration, automation, continuous integration, and faster delivery of software.
