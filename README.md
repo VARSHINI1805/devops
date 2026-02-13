@@ -1,86 +1,170 @@
-This folder contains the essential files used in Day4 of my DevOps project, focused on setting up and automating a CI/CD pipeline using Jenkins and Docker.
+DEVOPS DAY 4
+JENKINS CI/CD WITH DOCKER
 
----
+------------------------------------------------------------
+OVERVIEW
+------------------------------------------------------------
 
-## 🚀 What’s Inside This Folder
+This project demonstrates the implementation of a CI/CD pipeline using Jenkins and Docker.
+The objective is to automate Docker image building and container deployment using Jenkins integrated with GitHub.
 
-| File | Purpose |
-|------|---------|
-| `Jenkinsfile` | Defines the Jenkins pipeline to build and deploy the Docker image automatically |
-| `Dockerfile` | Instructions to build the Docker image using NGINX |
-| `index.html` | A simple HTML page to serve inside the Docker container |
+------------------------------------------------------------
+STEP 1 – Install Java (Required for Jenkins)
+------------------------------------------------------------
 
----
+sudo apt update
+sudo apt install openjdk-21-jre -y
+java -version
 
-## 🧠 Overview
+------------------------------------------------------------
+STEP 2 – Install Jenkins
+------------------------------------------------------------
 
-### 📌 Jenkinsfile
+sudo wget -O /etc/apt/keyrings/jenkins-keyring.asc \
+https://pkg.jenkins.io/debian-stable/jenkins.io-2026.key
 
-This file tells Jenkins how to:
+echo "deb [signed-by=/etc/apt/keyrings/jenkins-keyring.asc]" \
+https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+/etc/apt/sources.list.d/jenkins.list > /dev/null
 
-1. Pull code from the repository
-2. Build the Docker image
-3. Stop and remove any existing container
-4. Run a fresh container with the updated image
+sudo apt update
+sudo apt install jenkins -y
 
-This automates your entire deployment process using CI/CD.
+------------------------------------------------------------
+STEP 3 – Start Jenkins
+------------------------------------------------------------
 
----
+sudo systemctl start jenkins
+sudo systemctl enable jenkins
+sudo systemctl status jenkins
 
-## 🐳 Dockerfile
+------------------------------------------------------------
+STEP 4 – Unlock Jenkins
+------------------------------------------------------------
 
-The Dockerfile uses the official NGINX image and copies your web page into the container:
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 
-```dockerfile
+Copy the password and open browser:
+
+http://<server-ip>:8080
+
+Example:
+http://192.168.117.128:8080
+
+Install suggested plugins and create admin user.
+
+------------------------------------------------------------
+STEP 5 – Install Docker
+------------------------------------------------------------
+
+sudo apt install docker.io -y
+sudo systemctl start docker
+sudo systemctl enable docker
+
+Add jenkins user to docker group:
+
+sudo usermod -aG docker jenkins
+sudo systemctl restart jenkins
+
+Verify:
+
+groups jenkins
+
+------------------------------------------------------------
+STEP 6 – Create Docker Project Files
+------------------------------------------------------------
+
+Dockerfile:
+
 FROM nginx:latest
 COPY index.html /usr/share/nginx/html/index.html
-This builds a simple web server using NGINX that displays your index.html.
 
-🌐 index.html
-Your HTML page shows an attractive DevOps project landing page with your name and purpose.
+index.html:
 
-📌 How to Use
-✅ Run Locally (Manual Docker Run)
-docker build -t web134 .
-docker run -d -p 5000:80 --name web134 web134
-Open in browser:
+Create an attractive HTML page displaying your name and project details.
 
-http://<your-server-ip>:5000
-🛠️ Jenkins CI/CD Integration
-Your Jenkinsfile automatically performs:
+------------------------------------------------------------
+STEP 7 – Create Jenkinsfile
+------------------------------------------------------------
 
-Pull from GitHub day-4/Day4
+Jenkinsfile defines CI/CD pipeline stages:
 
-Docker build and run
+- Build Docker image
+- Stop old container
+- Remove old container
+- Run new container
 
-Container cleanup
+------------------------------------------------------------
+STEP 8 – Push Files to GitHub
+------------------------------------------------------------
 
-Continuous deployment
+git add .
+git commit -m "Added Day4 Jenkins CI/CD files"
+git push origin day-4
 
-⚠ Make sure Jenkins Pipeline configuration uses:
+------------------------------------------------------------
+STEP 9 – Configure Jenkins Pipeline
+------------------------------------------------------------
 
-Script Path: Day4/Jenkinsfile
-Branch Specifier: */day-4
-Repository URL: https://github.com/VARSHINI1805/devops.git
+Create New Item → Pipeline
 
+Pipeline Configuration:
 
-This folder reflects my Day4 work focused on automated deployment using Jenkins and Docker.
+Repository URL:
+https://github.com/VARSHINI1805/devops.git
 
+Branch Specifier:
+*/day-4
 
----
+Script Path:
+Day4/Jenkinsfile
 
-### 📌 How to Add This to GitHub
+Save configuration.
 
-1. Make sure you are in **day-4 branch**
-2. Create a README file inside **Day4 folder**
+------------------------------------------------------------
+STEP 10 – Build Pipeline
+------------------------------------------------------------
 
-```bash
-cd ~/devops
-git checkout day-4
-nano Day4/README.md
-Paste the content above
+Click Build Now.
 
-Save and exit
+Pipeline will automatically:
 
-Ctrl + O → Enter  
-Ctrl + X
+1. Pull code from GitHub
+2. Build Docker image
+3. Stop old container
+4. Remove old container
+5. Run new container
+
+------------------------------------------------------------
+STEP 11 – Access Application
+------------------------------------------------------------
+
+Open browser:
+
+http://<server-ip>:5000
+
+Example:
+http://192.168.117.128:5000
+
+------------------------------------------------------------
+FINAL OUTCOME
+------------------------------------------------------------
+
+- Jenkins successfully installed
+- Docker integrated with Jenkins
+- GitHub connected
+- CI/CD pipeline automated
+- Container deployed automatically
+- Website running successfully
+
+------------------------------------------------------------
+LEARNING OUTCOME
+------------------------------------------------------------
+
+- Jenkins installation and configuration
+- GitHub integration with Jenkins
+- Docker image lifecycle management
+- Container deployment automation
+- Understanding of CI/CD workflow
+
+END OF DAY 4 PRACTICAL
