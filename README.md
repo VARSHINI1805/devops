@@ -30,6 +30,7 @@ https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
 sudo apt update
 sudo apt install jenkins -y
 
+
 ------------------------------------------------------------
 STEP 3 – Start Jenkins
 ------------------------------------------------------------
@@ -166,5 +167,25 @@ LEARNING OUTCOME
 - Docker image lifecycle management
 - Container deployment automation
 - Understanding of CI/CD workflow
+
+------------------------------------------------------------
+📸 OUTPUT SCREENSHOTS
+------------------------------------------------------------
+
+![](Day4/Screenshot%202026-02-13%20111709.png)
+
+![](Day4/Screenshot%202026-02-13%20085223.png)
+
+
+![](Day4/Screenshot%202026-02-13%20112615.png)
+
+
+![](Day4/Screenshot%202026-02-13%20085508.png)
+
+![](Day4/Screenshot%202026-02-13%20101133.png)
+
+![](Day4/Screenshot%202026-02-13%20101631.png)
+
+
 
 END OF DAY 4 PRACTICAL
