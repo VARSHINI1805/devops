@@ -62,10 +62,7 @@ Continuous deployment
 Script Path: Day4/Jenkinsfile
 Branch Specifier: */day-4
 Repository URL: https://github.com/VARSHINI1805/devops.git
-👩‍💻 Author
-Varshini S
-DevOps Enthusiast
-Computer Science Engineering
+
 
 This folder reflects my Day4 work focused on automated deployment using Jenkins and Docker.
 
