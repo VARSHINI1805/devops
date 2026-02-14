@@ -191,12 +191,10 @@ Container Port → 80
 
 ## 📸 OUTPUT SCREENSHOTS
 
-```
 ![](Day2/Screenshot%202026-02-10%20145958.png)
 ![](Day2/Screenshot%202026-02-12%20195410.png)
 ![](Day2/Screenshot%202026-02-12%20195616.png)
 ![](Day2/Screenshot%202026-02-12%20195715.png)
-```
 
 ---
 
@@ -244,63 +242,14 @@ SSH allows secure communication between local Ubuntu system and GitHub without u
 
 ---
 
-## Step 3: Repository Cloning
-
-```bash
-git clone git@github.com:VARSHINI1805/devops.git
-cd devops
-ls -a
-```
-
-Confirmed `.git` directory exists, which indicates it is a Git repository.
-
----
-
-## Step 4: Branch Creation
-
-```bash
-git branch
-git checkout -b new-branch
-git branch
-```
-
-The active branch is marked with (*).
-
----
-
-## Step 5: File Creation and Documentation
-
-```bash
-touch documentation.txt
-nano documentation.txt
-```
-
-Added detailed workflow explanation inside the file.
-
----
-
-## Conclusion
-
-Git was successfully configured.  
-SSH authentication was set up and tested.  
-Repository was cloned securely.  
-A new branch was created for independent development.  
-Basic branch workflow was practiced successfully.
-
-Status: Configuration and branch setup completed successfully.
-
----
-
 ## 📸 OUTPUT SCREENSHOTS
 
-```
 ![](Day3/Screenshot%202026-02-12%20200945.png)
 ![](Day3/Screenshot%202026-02-12%20200952.png)
 ![](Day3/Screenshot%202026-02-12%20201004.png)
 ![](Day3/Screenshot%202026-02-12%20201010.png)
 ![](Day3/Screenshot%202026-02-12%20201018.png)
 ![](Day3/Screenshot%202026-02-12%20201024.png)
-```
 
 ---
 
@@ -365,132 +314,13 @@ http://<server-ip>:8080
 
 ---
 
-## STEP 5 – Install Docker
-
-```bash
-sudo apt install docker.io -y
-sudo systemctl start docker
-sudo systemctl enable docker
-
-sudo usermod -aG docker jenkins
-sudo systemctl restart jenkins
-
-groups jenkins
-```
-
----
-
-## STEP 6 – Create Docker Project Files
-
-Dockerfile:
-```dockerfile
-FROM nginx:latest
-COPY index.html /usr/share/nginx/html/index.html
-```
-
-index.html:  
-Create an attractive HTML page displaying your name and project details.
-
----
-
-## STEP 7 – Create Jenkinsfile
-
-Jenkinsfile defines CI/CD pipeline stages:
-
-- Build Docker image
-- Stop old container
-- Remove old container
-- Run new container
-
----
-
-## STEP 8 – Push Files to GitHub
-
-```bash
-git add .
-git commit -m "Added Day4 Jenkins CI/CD files"
-git push origin day-4
-```
-
----
-
-## STEP 9 – Configure Jenkins Pipeline
-
-Create New Item → Pipeline  
-
-Repository URL:
-```
-https://github.com/VARSHINI1805/devops.git
-```
-
-Branch Specifier:
-```
-*/day-4
-```
-
-Script Path:
-```
-Day4/Jenkinsfile
-```
-
----
-
-## STEP 10 – Build Pipeline
-
-Click **Build Now**.
-
-Pipeline will automatically:
-1. Pull code from GitHub
-2. Build Docker image
-3. Stop old container
-4. Remove old container
-5. Run new container
-
----
-
-## STEP 11 – Access Application
-
-```
-http://<server-ip>:5000
-```
-
-Example:
-```
-http://192.168.117.128:5000
-```
-
----
-
-## FINAL OUTCOME
-
-- Jenkins successfully installed
-- Docker integrated with Jenkins
-- GitHub connected
-- CI/CD pipeline automated
-- Container deployed automatically
-- Website running successfully
-
----
-
-## LEARNING OUTCOME
-
-- Jenkins installation and configuration
-- GitHub integration with Jenkins
-- Docker image lifecycle management
-- Container deployment automation
-- Understanding of CI/CD workflow
-
----
-
 ## 📸 OUTPUT SCREENSHOTS
 
-```
 ![](Day4/Screenshot%202026-02-13%20111709.png)
 ![](Day4/Screenshot%202026-02-13%20085223.png)
 ![](Day4/Screenshot%202026-02-13%20112615.png)
 ![](Day4/Screenshot%202026-02-13%20085508.png)
 ![](Day4/Screenshot%202026-02-13%20101133.png)
 ![](Day4/Screenshot%202026-02-13%20101631.png)
-```
 
 ---
