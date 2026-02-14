@@ -1,4 +1,4 @@
-# DEVOPS DAY 4 JENKINS CI/CD WITH DOCKER
+# DEVOPS DAY 4 JENKINS CI/CD 
 
 ------------------------------------------------------------
 OVERVIEW
