@@ -1,326 +1,101 @@
-# 🐧 DevOps Day 1 – Linux Commands
+# ☁️ DevOps Day 5 – AWS, EC2 & Terraform
 
-This document contains basic Linux commands practiced as part of DevOps Day-1.
 
----
-
-## 📁 1️⃣ Directory Commands
-
-- `pwd` – Print Working Directory (Shows current location)
-- `ls` – List files and folders
-- `ls -l` – Detailed list format
-- `ls -a` – Show hidden files
-- `cd foldername` – Change directory
-- `cd ..` – Go to parent directory
-- `cd ~` – Go to home directory
-- `mkdir newdir` – Create new directory
-- `rmdir newdir` – Remove empty directory
+- AWS Account Creation
+- EC2 Instance Setup (Windows & Ubuntu)
+- Terraform Installation
+- Terraform Basic Commands
+- Implementation Screenshots
 
 ---
 
-## 📄 2️⃣ File Commands
+## 1️⃣ Create AWS Account
 
-- `touch file.txt` – Create empty file
-- `vim file.txt` – Open file in Vim editor
-- `cat file.txt` – Display file content
-- `cp source.txt dest.txt` – Copy file
-- `mv old.txt new.txt` – Move or rename file
-- `rm file.txt` – Delete file
-- `history` – Show previously used commands
-
----
-
-## ⭐ 3️⃣ Wildcard Commands
-
-- `ls *.txt` – List all `.txt` files
-- `rm *.txt` – Remove all `.txt` files
-- `ls file?.txt` – Match exactly one character
+1. Go to https://aws.amazon.com  
+2. Click Create an AWS Account  
+3. Enter Email & Account Name  
+4. Verify Email  
+5. Set Root Password  
+6. Fill Contact Info (Personal)  
+7. Add Debit/Credit Card (Free Tier verification)  
+8. Complete Identity Verification (OTP)  
+9. Choose Basic Support (Free)  
+10. Login → Sign In → Root User  
 
 ---
 
-## 📦 4️⃣ Ubuntu Package Commands
+## 2️⃣ Create Windows EC2 Instance
 
-- `sudo apt update` – Update package list
-- `sudo apt upgrade -y` – Upgrade installed packages
-
----
-
-## 🔐 5️⃣ SSH Commands
-
-- `sudo apt install openssh-server` – Install SSH
-- `sudo systemctl status ssh` – Check SSH status
-- `sudo systemctl start ssh` – Start SSH service
-- `sudo systemctl enable ssh` – Enable SSH at boot
+- Go to EC2 → Launch Instance  
+- Name: Windows-Server  
+- AMI: Windows Server 2022  
+- Instance Type: t2.micro  
+- Create Key Pair (.pem)  
+- Allow RDP (3389) and HTTP (80)  
+- Launch & Connect using RDP  
 
 ---
 
-## ⚙️ 6️⃣ Additional Important Commands
+## 3️⃣ Create Ubuntu EC2 Instance
 
-- `clear` – Clear terminal screen (Shortcut: **Ctrl + L**)
-- `head file.txt` – Show first 10 lines
-- `tail file.txt` – Show last 10 lines
-- `tail -f file.txt` – Live monitoring
-- `chmod +x script.sh` – Make file executable
-- `ps` – Show running processes
-- `top` – Real-time process monitoring
-- `ip a` – Show IP address
-- `ping google.com` – Check network connectivity
+- Go to EC2 → Launch Instance  
+- Name: Ubuntu-Server  
+- AMI: Ubuntu 22.04 LTS  
+- Instance Type: t2.micro  
+- Create Key Pair (.pem)  
+- Allow SSH (22) and HTTP (80)  
 
 ---
 
-## 🎯 Learning Outcome
+## 4️⃣ Install Terraform (Ubuntu)
 
-✔ Understanding Linux file system  
-✔ Managing files and directories  
-✔ Using wildcards  
-✔ Installing packages  
-✔ Configuring SSH  
-✔ Monitoring processes and network  
+Update system:
 
----
+sudo apt update -y
 
-# 🐳 DevOps Day 2 – Docker
+Install Terraform:
 
-This repository branch contains Day-2 focused on Docker installation, configuration, and container management.
+sudo apt install terraform -y
 
----
+Check version:
 
-## 📌 OBJECTIVE
-
-The objective of Day-2 is to understand Docker fundamentals including:
-
-- Installing Docker on Ubuntu
-- Running containers
-- Managing images
-- Port mapping
-- Container lifecycle management
+terraform -version
 
 ---
 
-## 🛠 STEP 1 – Install Docker
+## 5️⃣ Terraform Basic Commands
 
-### Update system:
-```bash
-sudo apt update
-```
+Initialize:
 
-### Install Docker:
-```bash
-sudo apt install docker.io -y
-```
+terraform init
 
-### Start Docker service:
-```bash
-sudo systemctl start docker
-```
+Validate:
 
-### Enable Docker at boot:
-```bash
-sudo systemctl enable docker
-```
+terraform validate
 
-### Verify Docker:
-```bash
-docker --version
-docker info
-```
+Plan:
+
+terraform plan
+
+Apply:
+
+terraform apply
+
+Destroy:
+
+terraform destroy
 
 ---
 
-## 📦 STEP 2 – Basic Docker Commands
+# 📸 Screenshots
 
-- `docker images` → Shows downloaded Docker images  
-- `docker pull nginx` → Download nginx image from Docker Hub  
-- `docker run nginx` → Run container from image  
-- `docker run -d nginx` → Run container in background mode  
-- `docker ps` → Show running containers  
-- `docker ps -a` → Show all containers (including stopped)  
-- `docker stop <container_id>` → Stop running container  
-- `docker rm <container_id>` → Remove container  
-- `docker rmi <image_name>` → Remove image  
+![](https://raw.githubusercontent.com/VARSHINI1805/devops/day-5/Day5/Screenshot%202026-02-13%20141404.png)
+
+![](https://raw.githubusercontent.com/VARSHINI1805/devops/day-5/Day5/Screenshot%202026-02-13%20155754.png)
+
+![](https://raw.githubusercontent.com/VARSHINI1805/devops/day-5/Day5/Screenshot%202026-02-13%20160634.png)
+
+![](https://raw.githubusercontent.com/VARSHINI1805/devops/day-5/Day5/Screenshot%202026-02-14%20100116.png)
 
 ---
 
-## 🌐 STEP 3 – Run Nginx Container
-
-### Run Nginx with port mapping:
-```bash
-docker run -d -p 8080:80 nginx
-```
-
-### Open browser:
-```
-http://<server-ip>:8080
-```
-
-Example:
-```
-http://192.168.117.128:8080
-```
-
----
-
-## 📂 STEP 4 – Docker File Structure Understanding
-
-Image → Blueprint  
-Container → Running instance of image  
-Docker Hub → Online image repository  
-Port Mapping → Connect container port to host port  
-
-Example:
-```
--p 8080:80
-```
-
-Host Port → 8080  
-Container Port → 80  
-
----
-
-## 🎯 LEARNING OUTCOME
-
-✔ Installed Docker successfully  
-✔ Understood Docker architecture  
-✔ Pulled images from Docker Hub  
-✔ Ran containers  
-✔ Used port mapping  
-✔ Managed container lifecycle  
-✔ Practiced basic Docker commands  
-
----
-
-## 📸 OUTPUT SCREENSHOTS
-
-![](Day2/Screenshot%202026-02-10%20145958.png)
-![](Day2/Screenshot%202026-02-12%20195410.png)
-![](Day2/Screenshot%202026-02-12%20195616.png)
-![](Day2/Screenshot%202026-02-12%20195715.png)
-
----
-
-# DEVOPS DAY 3  
-## GIT SSH CONFIGURATION AND BRANCH WORKFLOW
-
-Repository: `devops`
-
----
-
-## Objective
-
-To configure Git with SSH authentication and create a new branch for development work.
-
----
-
-## Step 1: Git Configuration
-
-```bash
-git config --global user.name "VARSHINI1805"
-git config --global user.email "varshinisureshkumar224@gmail.com"
-git config --list
-```
-
-Purpose:  
-This ensures that all commits are recorded with correct author details.
-
----
-
-## Step 2: SSH Key Generation
-
-```bash
-ssh-keygen -t ed25519 -C "varshinisureshkumar224@gmail.com"
-cat ~/.ssh/id_ed25519.pub
-ssh -T git@github.com
-```
-
-Added the SSH public key to GitHub under:  
-Settings → SSH and GPG Keys  
-
-Authentication was successful.
-
-Purpose:  
-SSH allows secure communication between local Ubuntu system and GitHub without using a password each time.
-
----
-
-## 📸 OUTPUT SCREENSHOTS
-
-![](Day3/Screenshot%202026-02-12%20200945.png)
-![](Day3/Screenshot%202026-02-12%20200952.png)
-![](Day3/Screenshot%202026-02-12%20201004.png)
-![](Day3/Screenshot%202026-02-12%20201010.png)
-![](Day3/Screenshot%202026-02-12%20201018.png)
-![](Day3/Screenshot%202026-02-12%20201024.png)
-
----
-
-# DEVOPS DAY 4  
-## JENKINS CI/CD WITH DOCKER
-
----
-
-## OVERVIEW
-
-This project demonstrates the implementation of a CI/CD pipeline using Jenkins and Docker.  
-The objective is to automate Docker image building and container deployment using Jenkins integrated with GitHub.
-
----
-
-## STEP 1 – Install Java
-
-```bash
-sudo apt update
-sudo apt install openjdk-21-jre -y
-java -version
-```
-
----
-
-## STEP 2 – Install Jenkins
-
-```bash
-sudo wget -O /etc/apt/keyrings/jenkins-keyring.asc \
-https://pkg.jenkins.io/debian-stable/jenkins.io-2026.key
-
-echo "deb [signed-by=/etc/apt/keyrings/jenkins-keyring.asc]" \
-https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
-/etc/apt/sources.list.d/jenkins.list > /dev/null
-
-sudo apt update
-sudo apt install jenkins -y
-```
-
----
-
-## STEP 3 – Start Jenkins
-
-```bash
-sudo systemctl start jenkins
-sudo systemctl enable jenkins
-sudo systemctl status jenkins
-```
-
----
-
-## STEP 4 – Unlock Jenkins
-
-```bash
-sudo cat /var/lib/jenkins/secrets/initialAdminPassword
-```
-
-Open browser:
-```
-http://<server-ip>:8080
-```
-
----
-
-## 📸 OUTPUT SCREENSHOTS
-
-![](Day4/Screenshot%202026-02-13%20111709.png)
-![](Day4/Screenshot%202026-02-13%20085223.png)
-![](Day4/Screenshot%202026-02-13%20112615.png)
-![](Day4/Screenshot%202026-02-13%20085508.png)
-![](Day4/Screenshot%202026-02-13%20101133.png)
-![](Day4/Screenshot%202026-02-13%20101631.png)
-
----
