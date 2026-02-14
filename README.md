@@ -88,4 +88,13 @@ You should see the Apache default page or deployed web content.
 
 ---
 
+---
+
+# 📸 Screenshot
+
+![](https://raw.githubusercontent.com/VARSHINI1805/devops/day-6/Day6/Screenshot%202026-02-14%20120251.png)
+
+
+---
+
 
