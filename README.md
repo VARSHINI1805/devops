@@ -1,6 +1,5 @@
 # 🐧 DevOps Day 1 – Linux Commands
-
-This document contains basic Linux commands practiced as part of DevOps Day-1.
+ contains basic Linux commands practiced as part of DevOps Day-1.
 
 ---
 
@@ -68,19 +67,10 @@ This document contains basic Linux commands practiced as part of DevOps Day-1.
 
 ---
 
-## 🎯 Learning Outcome
 
-✔ Understanding Linux file system  
-✔ Managing files and directories  
-✔ Using wildcards  
-✔ Installing packages  
-✔ Configuring SSH  
-✔ Monitoring processes and network  
-
----
 # 🐳 DevOps Day 2 – Docker 
 
-This repository branch contains  Day-2 focused on Docker installation, configuration, and container management.
+This repository branch contains Day-2 focused on Docker installation, configuration, and container management.
 
 ------------------------------------------------------------
 📌 OBJECTIVE
@@ -326,8 +316,8 @@ Configuration and branch setup completed successfully.
 
 ![](Day3/Screenshot%202026-02-12%20201024.png)
 
-DEVOPS DAY 4
-JENKINS CI/CD WITH DOCKER
+
+# 🚀 DevOps Day 4 – Jenkins CI/CD with Docker
 
 ------------------------------------------------------------
 OVERVIEW
